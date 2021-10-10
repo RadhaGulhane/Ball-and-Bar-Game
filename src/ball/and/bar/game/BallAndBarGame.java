@@ -56,25 +56,25 @@ public class BallAndBarGame extends Frame {
 
         g.setColor(Color.cyan);
         String GameName = "BALLAND BAR";
-         int x_pos = 150;
+        int x_pos = 150;
         int y_pos = 300;
         int alpha = 8;
         for (int i = 0; i < GameName.length(); i++) {
- 
+
             ((Graphics2D) g).setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, alpha * 0.1f));
-             g.drawString(Character.toString(GameName.charAt(i)), x_pos, y_pos);
-             x_pos += 150;
+            g.drawString(Character.toString(GameName.charAt(i)), x_pos, y_pos);
+            x_pos += 150;
             // alpha -= 1;
         }
-        
+
         g.setColor(Color.orange);
         GameName = "GAME";
         x_pos = 700;
         y_pos = 550;
         for (int i = 0; i < GameName.length(); i++) {
             ((Graphics2D) g).setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, alpha * 0.1f));
-             g.drawString(Character.toString(GameName.charAt(i)), x_pos, y_pos);
-             x_pos += 150;
+            g.drawString(Character.toString(GameName.charAt(i)), x_pos, y_pos);
+            x_pos += 150;
             // alpha -= 1;
         }
         /*
@@ -103,7 +103,7 @@ public class BallAndBarGame extends Frame {
 
         ((Graphics2D) g).setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 7 * 0.1f));
         g.drawString("E", 1150, 500);
-*/
+         */
     }
 
     public static void main(String[] args) {
@@ -115,7 +115,7 @@ public class BallAndBarGame extends Frame {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-       
+
         btn = new Button("LET'S PLAY :)");
         btn.setBounds(800, 700, 300, 100);
         f.add(btn);

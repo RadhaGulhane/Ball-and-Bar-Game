@@ -11,44 +11,42 @@ import java.awt.event.WindowEvent;
 
 import javax.swing.text.StyledEditorKit.FontFamilyAction;
 
-public class ScoreScreen extends Frame{
-	
-	
-	
-	
-	@Override
-	public void paint(Graphics g) {
-		g.setFont(new Font("Comic Sans MS", Font.PLAIN, 100));
-		((Graphics2D) g).setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER,  8*0.1f));
+public class ScoreScreen extends Frame {
 
-		g.setColor(Color.orange);
-		g.drawString("SCORE : ", 550,500 );
-		
-		g.setFont(new Font("Comic Sans MS", Font.PLAIN, 50));
+    int Score;
 
-		g.setColor(Color.GREEN);
-		g.drawString("Sorry....you loose !!! :) ", 700,600 );
+    @Override
+    public void paint(Graphics g) {
+        g.setFont(new Font("Comic Sans MS", Font.PLAIN, 100));
+        ((Graphics2D) g).setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 8 * 0.1f));
 
-		
-	}
+        g.setColor(Color.orange);
+        g.drawString("SCORE : " + Score, 550, 500);
 
-	public ScoreScreen(){
-	
-		this.setLayout(null);
-		this.setTitle("MY GAME");
-		this.setExtendedState(Frame.MAXIMIZED_BOTH);
-		this.setLocation(0,0);
-		this.setVisible(true);
-		
-		this.addWindowListener(new WindowAdapter() {
+        g.setFont(new Font("Comic Sans MS", Font.PLAIN, 50));
 
-			@Override
-			public void windowClosing(WindowEvent e) {
-				System.exit(0);
-			}
-			
-		});
-	
-	}
+        g.setColor(Color.GREEN);
+        g.drawString("Sorry....you loose !!! :) ", 700, 600);
+
+    }
+
+    public ScoreScreen(int Score) {
+        this.Score = Score;
+        this.setLayout(null);
+        this.setTitle("MY GAME");
+        this.setExtendedState(Frame.MAXIMIZED_BOTH);
+        this.setLocation(0, 0);
+        this.setVisible(true);
+
+        this.addWindowListener(new WindowAdapter() {
+
+            @Override
+            public void windowClosing(WindowEvent e) {
+                System.exit(0);
+            }
+
+        });
+
+    }
 
 }
